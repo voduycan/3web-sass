@@ -1,0 +1,46 @@
+a.button{
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    background:white;
+    border-radius: 2em;
+    width: 150px;
+    &:hover{
+       span{
+            transform: translate3d(0,100%,0);
+        }
+        &::before{
+            transform: translate3d(0,0,0);
+        }
+    }
+    &.primary{
+        background:  #ffc90e;
+    }
+    &::before{
+        position: absolute;
+        background: white;
+        content: attr(data-text);
+        top: 0;
+        left: 0;
+        transform: translate3d(-100%,0,0);
+    }
+    span{
+        transform: translate3d(0,0,0);
+    }
+    &::before,span{
+        font-size: 10px;
+        letter-spacing: 1px;
+        display: block;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 2em;
+        transition: transform 0.2s ease-in-out;
+        width: 150px;
+        height: 20px;
+        text-align: center;
+        padding-top: 7px;
+    }
+}
