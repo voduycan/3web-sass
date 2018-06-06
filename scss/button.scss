@@ -6,7 +6,9 @@ a.button{
     vertical-align: middle;
     background:white;
     border-radius: 2em;
-    width: 150px;
+    text-align: center;
+    padding: 0;
+  
     &:hover{
        span{
             transform: translate3d(0,100%,0);
@@ -17,6 +19,19 @@ a.button{
     }
     &.primary{
         background:  #ffc90e;
+       @media only screen and (max-width: 767px){
+        width: 12em;
+       }
+
+    }
+    &.close{
+        border: 1px solid black;
+        background: white;
+        color: black;
+        &::before{
+            background: black;
+            color: white;
+        }
     }
     &::before{
         position: absolute;
@@ -38,7 +53,7 @@ a.button{
         text-transform: uppercase;
         border-radius: 2em;
         transition: transform 0.2s ease-in-out;
-        width: 150px;
+        padding: 0 2.5em;
         height: 20px;
         text-align: center;
         padding-top: 7px;

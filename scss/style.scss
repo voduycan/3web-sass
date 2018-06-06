@@ -1,16 +1,10 @@
-@import "animation";
-@import "variable";
-@import "normalize";
-@import "fonts";
-@import "button";
-@import "scrollbar";
 
 .dis-block{
-    display: block;
-    animation: bounceIn 0.8s linear forwards; 
+    display: block !important;
+    animation: bounceIn 0.8s linear forwards;
 }
-.dis-none{
-    display: none;
+.modal-block{
+    display: block !important;
 }
 body{
     width: 100%;
@@ -20,6 +14,9 @@ body{
     color: $color-white;
 }
 header{
+    @media only screen and (max-width: 375px){
+        padding-left: 2em;
+    }
     position: fixed;
     width: calc(100% - 8em);
     height: 67px;
@@ -27,12 +24,14 @@ header{
     top: 2em;
     z-index: $z-index3;
     opacity: 1;
+
     #logo{
         text-decoration: none;
         color: $color-white;
         font-size: 2em;
         display: inline-block;
         position: relative;
+
         img{
             opacity: 1;
             height: 6vmax;
@@ -68,6 +67,7 @@ header{
             }
         }
         #menu-item{
+            display: none;
             position: absolute;
             top: -1em;
             left: -7em;
@@ -152,8 +152,21 @@ header{
                 .left-content{
                     position: relative;
                     float: left;
-                    width: 70%;
+                    width: 30%;
                     h1{
+                        @media only screen and (max-width: 767px){
+                            font-size: 50px;
+                            width: 60vmax;
+                        }
+                        @media only screen and (max-width: 568px){
+                            font-size: 40px;
+                            width: 45vmax;
+                        }
+                        @media only screen and (max-width: 375px){
+                            font-size: 40px;
+                            width: 35vmax;
+                        }
+                        
                         font-family: "Montserrat", Helvetica, Arial, sans-serif;
                         margin: 0;
                         font-size: 55px;
@@ -162,15 +175,36 @@ header{
                         width: 33vmax;
                     }
                     p{
+                        
+                        @media only screen and (max-width: 767px){
+                            width: 60vmax;
+                        }
+                        @media only screen and (max-width: 568px){
+                            width: 43vmax;
+                            text-align: justify;
+                        }
+                        @media only screen and (max-width: 375px){
+                            width: 35vmax;
+                        }
                         width: 45vmax;
                         line-height: 1.5em;
                         letter-spacing: .5px;
                     }
                 }
                 .right-content{
+                    @media only screen and (max-width: 767px){
+                        left: -2em;
+                    }
+                    @media only screen and (max-width: 568px){
+                        top: 75%;
+                    }
+                    @media only screen and (max-width: 375px){
+                        left: -3em;
+                        top: 80%;
+                    }
                     position: relative;
                     float: right;
-                    width: 30%;
+                    width: 40%;
                     top: 50%;
                     .my-a{
                         font-size: 11px;
@@ -221,30 +255,45 @@ header{
         }
     }
     #pg1{
+        @media only screen and (max-width: 767px) {
+            background-image: url(../images/jpg/bg-section1-mobile.jpg);
+        }
         background-image: url(../images/bg-section1.jpg);
         .wrap{
             background: $bg-page1;
         }
     }
     #pg2{
+        @media only screen and (max-width: 767px) {
+            background-image: url(../images/jpg/bg-section2-mobile.jpg);
+        }
         background-image: url(../images/bg-section2.jpg);
         .wrap{
             background: $bg-page2;
         }
     }
     #pg3{
+        @media only screen and (max-width: 767px) {
+            background-image: url(../images/jpg/bg-section3-mobile.jpg);
+        }
         background-image: url(../images/bg-section3.jpg);
         .wrap{
             background: $bg-page3;
         }
     }
     #pg4{
+        @media only screen and (max-width: 767px) {
+            background-image: url(../images/jpg/bg-section4-mobile.jpg);
+        }
         background-image: url(../images/bg-section4.jpg);
         .wrap{
             background: $bg-page4;
         } 
     }
     #pg5{
+        @media only screen and (max-width: 767px) {
+            background-image: url(../images/jpg/bg-section5-mobile.jpg);
+        }
         background-image: url(../images/bg-section5.jpg);
         .wrap{
             background: $bg-page5;
@@ -252,6 +301,10 @@ header{
     }
 }
 footer{
+    @media only screen and (max-width: 767px){
+        display: none;
+    }
+    z-index: $z-index3;
     position: fixed;
     bottom: 3em;
     left: 4em;

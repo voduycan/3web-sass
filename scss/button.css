@@ -6,13 +6,24 @@ a.button {
   vertical-align: middle;
   background: white;
   border-radius: 2em;
-  width: 150px; }
+  text-align: center;
+  padding: 0; }
   a.button:hover span {
     transform: translate3d(0, 100%, 0); }
   a.button:hover::before {
     transform: translate3d(0, 0, 0); }
   a.button.primary {
     background: #ffc90e; }
+    @media only screen and (max-width: 767px) {
+      a.button.primary {
+        width: 12em; } }
+  a.button.close {
+    border: 1px solid black;
+    background: white;
+    color: black; }
+    a.button.close::before {
+      background: black;
+      color: white; }
   a.button::before {
     position: absolute;
     background: white;
@@ -31,7 +42,7 @@ a.button {
     text-transform: uppercase;
     border-radius: 2em;
     transition: transform 0.2s ease-in-out;
-    width: 150px;
+    padding: 0 2.5em;
     height: 20px;
     text-align: center;
     padding-top: 7px; }

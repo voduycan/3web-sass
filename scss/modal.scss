@@ -1,0 +1,89 @@
+
+.md-modal{
+    @media only screen and (max-width: 767px){
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        .md-content{
+            padding: 2em !important; 
+        }
+
+    }
+    animation: bounceInLeft 0.8s linear forwards;
+    display: none;
+    overflow: auto;	
+    position: fixed;
+    z-index: $z-index5;
+    height: 100%;
+    background: wheat;
+    width: 44em;
+    left: 50%;
+    margin-left: -22em;
+    .md-content{
+        text-align: center;
+        min-height: 100%;
+        background: white;
+        border-left: 5px solid $color-orange;
+        color: $color-black;
+        padding: 2em 4em ;
+        .section{
+            padding: 4em 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:first-of-type{
+                padding: 0;
+                padding-bottom: 4em;
+            }
+            
+            .md-title{
+                position: relative;
+                margin-bottom: 3em;
+                height: 7em;
+                text-align: left;
+                span.name{
+                    @media only screen and (max-width: 375px) {
+                        width: 20em;
+                    }
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -1.5em;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: rgba(0, 0, 0, 0.5);
+                    strong{
+                        font-size: 17px;
+                        font-weight: 500;
+                        color: $color-black;
+                    }
+                }
+                span.avartar{
+                    img{
+                        border-radius: 50%;
+                        height: 7em;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+            p{
+                line-height: 1.5em;
+                letter-spacing: 0.5px;
+                text-align: justify;
+            }
+        }
+        a{
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+    }
+}
+.md-overlay{
+    display: none;
+    animation: bounceInLeft 0.8s linear forwards;
+    position: fixed;
+    z-index: 400;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.6;
+}

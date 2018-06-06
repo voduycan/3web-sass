@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="scss/style.css" type="text/css">
+    <link rel="stylesheet" href="scss/main.css" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/ico/ms-icon-144x144.png">
@@ -16,11 +16,9 @@
     
 </head>
   <header>
-    <div id="logo">
-      <a href="#" id="logo"><img src="./images/logo.svg" alt="logo"></a>
-    </div>
+    <a href="#" id="logo"><img src="./images/logo.svg" alt="logo"></a>
     <div id="menu">
-      <a id="icon" href="#menu-item" onclick="show()"><span class="icon-menu"></span></a>
+      <a id="icon"  onclick="show()"><span class="icon-menu"></span></a>
         <div id="menu-item">
             <div class="item"><a href="#pg1">INTRO</a></div>
             <div class="item"><a href="#pg2">WHO IS CREATIVE LAB</a></div>
@@ -32,6 +30,56 @@
     </div>
   </header>
   <body>
+    <div class="md-modal" id="md-team" >
+        <div class="md-content">
+           <div class="section">
+                <div class="md-title">
+                    <span class="name"><strong>ANDY CAO</strong><br> founder - managing director</span>
+                    <span class="avartar">
+                        <img src="./images/jpg/avatar-andy.jpg" alt="ANDY" title="">
+                    </span>
+                </div>
+                <p>Andy has 11 years of work experience as a UI/UX designer and front-end web developer.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. </p> 
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+           </div>
+           <div class="section">
+                <div class="md-title">
+                    <span class="name"><strong>Luan Bui</strong><br> product manager</span>
+                    <span class="avartar">
+                        <img src="./images/jpg/avatar-luan.jpg" alt="Luan">
+                    </span>
+                </div>
+                <p>Luan has 11 years of work experience as a UI/UX designer and front-end web developer.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. </p> 
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+           </div>
+           <div class="section">
+                <div class="md-title">
+                    <span class="name"><strong>minh ho</strong><br>techmical leader</span>
+                    <span class="avartar">
+                        <img src="./images/jpg/avatar-minh.jpg" alt="minh">
+                    </span>
+                </div>
+                <p>Minh has 11 years of work experience as a UI/UX designer and front-end web developer.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. </p> 
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+           </div>
+           <div class="section">
+                <div class="md-title">
+                    <span class="name"><strong>tuan ho</strong><br>team partner - ceo of tech apollo</span>
+                    <span class="avartar">
+                        <img src="./images/jpg/avatar-tuan.jpg" alt="tuan">
+                    </span>
+                </div>
+                <p>Tuan has 11 years of work experience as a UI/UX designer and front-end web developer.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. </p> 
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+           </div>
+           <a class="button close" data-text="Close" onclick="hideModal()"><span>Close</span></a>
+        </div>
+    </div>
+    <div class="md-overlay" onclick="hideModal()"></div> 
       <div class="my-container">
 
         <nav>
@@ -68,7 +116,7 @@
                     <div class="left-content">
                         <h1>Who Is Creative Lab?</h1>
                         <p>Creative Lab is a quality digital outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas.</p>
-                        <a href="" class="button primary" data-text="Meet the team"><span>Meet the team</span></a>
+                        <a class="button primary" data-text="Meet the team" id="meettheteam" onclick="showModal()"><span>Meet the team</span></a>
                     </div>
                     <div class="right-content">
                         <a href="#pg3" class="my-a">
@@ -125,7 +173,7 @@
                     <div class="left-content">
                         <h1>Don’t Just Take Our Word For It</h1>
                         <p>We're proud of the work we've done. Like craftsmen, we care about what we do. Each pixel refined, every line of code considered.</p>
-                        <a href="" class="button primary" data-text="Works we've done"><span>Works we're done</span></a>
+                        <a href="" class="button primary" data-text="Works we've done"><span>Works we've done</span></a>
                     
                     </div>
                     <div class="right-content">
@@ -152,6 +200,7 @@
     <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <script src="js/show-menu.js"></script>
+    <script src="js/show-hide-modal.js"></script>
 
     <!-- Waypoint & Modal Effect -->
 		<script src="js/classie.js"></script>
