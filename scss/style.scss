@@ -1,4 +1,6 @@
-
+.my-active{
+    background: white !important;
+}
 .dis-block{
     display: block !important;
     animation: bounceIn 0.8s linear forwards;
@@ -97,7 +99,7 @@ header{
     
 }
 .my-container {
-    nav{
+    #my-nav{
         position: fixed;
         top: 35%;
         left: 4em;
@@ -108,8 +110,11 @@ header{
             width: 4px;
             height: 4px;
             margin: 10px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid white;
             border-radius: 50%;
+            &:hover{
+                background: wheat;
+            }
         }
     }
     .page{
@@ -154,6 +159,7 @@ header{
                     float: left;
                     width: 30%;
                     h1{
+                        user-select: none;
                         @media only screen and (max-width: 767px){
                             font-size: 50px;
                             width: 60vmax;
@@ -175,7 +181,7 @@ header{
                         width: 33vmax;
                     }
                     p{
-                        
+                        user-select: none;
                         @media only screen and (max-width: 767px){
                             width: 60vmax;
                         }
@@ -304,8 +310,11 @@ footer{
     @media only screen and (max-width: 767px){
         display: none;
     }
-    z-index: $z-index3;
+    z-index: 300;
     position: fixed;
     bottom: 3em;
     left: 4em;
+    line-height: 1.5em;
+    letter-spacing: .5px;
+    font-size: 12px;
 }

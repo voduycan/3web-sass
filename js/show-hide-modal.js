@@ -1,8 +1,29 @@
-function showModal(){
-        $('.md-modal').addClass('modal-block');
-        $('.md-overlay').addClass('modal-block');
-}
-function hideModal(){
-    $('.md-modal').removeClass('modal-block');
-    $('.md-overlay').removeClass('modal-block');
-}
+$(document).ready(function(){
+    //meet the team
+    $('#meettheteam').click(function(){
+        $('#md-team').addClass('modal-block');
+        $('#my-overlay').addClass('modal-block');
+    });
+    $('#my-overlay').click(function(){
+        $('#md-team').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+    $('#close-team').click(function(){
+        $('#md-team').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+
+    //contact
+    $('#talk').click(function(){
+        $('#md-contact').addClass('modal-block');
+        $('#my-overlay').addClass('modal-block');
+    });
+    $('#my-overlay').click(function(){
+        $('#md-contact').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+    $('#close-contact').click(function(){
+        $('#md-contact').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+});

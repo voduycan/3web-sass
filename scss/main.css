@@ -211,7 +211,6 @@ html {
   position: fixed;
   z-index: 500;
   height: 100%;
-  background: wheat;
   width: 44em;
   left: 50%;
   margin-left: -22em; }
@@ -276,7 +275,61 @@ html {
   width: 100%;
   height: 100vh;
   background: black;
-  opacity: 0.6; }
+  opacity: 0.9; }
+
+#md-contact {
+  text-align: center; }
+  #md-contact h2 {
+    text-transform: uppercase;
+    font-size: 1.5em; }
+  #md-contact form {
+    margin-top: 4em;
+    padding-bottom: 2em; }
+    @media only screen and (max-width: 767px) {
+      #md-contact form {
+        padding: 1em; } }
+    #md-contact form fieldset {
+      text-align: center;
+      border: 1px solid yellow; }
+      #md-contact form fieldset legend {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase; }
+      #md-contact form fieldset input {
+        width: 34%;
+        margin: 2px;
+        height: 2em;
+        border: none;
+        padding: 0.5em 1em; }
+        @media only screen and (max-width: 767px) {
+          #md-contact form fieldset input {
+            width: 80%; } }
+        #md-contact form fieldset input:focus {
+          background: #ffc90e; }
+      #md-contact form fieldset textarea {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 73%;
+        height: 4em;
+        margin-top: 2px;
+        padding: 0.5em 1em; }
+        @media only screen and (max-width: 767px) {
+          #md-contact form fieldset textarea {
+            width: 80%; } }
+        #md-contact form fieldset textarea:focus {
+          background: #ffc90e; }
+      #md-contact form fieldset .form-button {
+        margin: 2em; }
+        #md-contact form fieldset .form-button a {
+          margin: 0 1em; }
+          @media only screen and (max-width: 767px) {
+            #md-contact form fieldset .form-button a {
+              width: 6em;
+              margin: 0.5em; } }
+      #md-contact form fieldset p a {
+        color: #ffc90e; }
+
+.my-active {
+  background: white !important; }
 
 .dis-block {
   display: block !important;
@@ -358,18 +411,20 @@ header {
           color: #ffc90e;
           text-decoration: none; }
 
-.my-container nav {
+.my-container #my-nav {
   position: fixed;
   top: 35%;
   left: 4em;
   z-index: 200; }
-  .my-container nav a {
+  .my-container #my-nav a {
     display: block;
     width: 4px;
     height: 4px;
     margin: 10px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
     border-radius: 50%; }
+    .my-container #my-nav a:hover {
+      background: wheat; }
 .my-container .page {
   z-index: 100;
   position: relative;
@@ -413,6 +468,7 @@ header {
         float: left;
         width: 30%; }
         .my-container .page .wrap .content .left-content h1 {
+          user-select: none;
           font-family: "Montserrat", Helvetica, Arial, sans-serif;
           margin: 0;
           font-size: 55px;
@@ -432,6 +488,7 @@ header {
               font-size: 40px;
               width: 35vmax; } }
         .my-container .page .wrap .content .left-content p {
+          user-select: none;
           width: 45vmax;
           line-height: 1.5em;
           letter-spacing: .5px; }
@@ -537,83 +594,12 @@ footer {
   z-index: 300;
   position: fixed;
   bottom: 3em;
-  left: 4em; }
+  left: 4em;
+  line-height: 1.5em;
+  letter-spacing: .5px;
+  font-size: 12px; }
   @media only screen and (max-width: 767px) {
     footer {
       display: none; } }
-
-.md-modal {
-  animation: bounceInLeft 0.8s linear forwards;
-  display: none;
-  overflow: auto;
-  position: fixed;
-  z-index: 500;
-  height: 100%;
-  background: wheat;
-  width: 44em;
-  left: 50%;
-  margin-left: -22em; }
-  @media only screen and (max-width: 767px) {
-    .md-modal {
-      width: 100%;
-      left: 0;
-      margin-left: 0; }
-      .md-modal .md-content {
-        padding: 2em !important; } }
-  .md-modal .md-content {
-    text-align: center;
-    min-height: 100%;
-    background: white;
-    border-left: 5px solid #ffc90e;
-    color: black;
-    padding: 2em 4em; }
-    .md-modal .md-content .section {
-      padding: 4em 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-      .md-modal .md-content .section:first-of-type {
-        padding: 0;
-        padding-bottom: 4em; }
-      .md-modal .md-content .section .md-title {
-        position: relative;
-        margin-bottom: 3em;
-        height: 7em;
-        text-align: left; }
-        .md-modal .md-content .section .md-title span.name {
-          position: absolute;
-          top: 50%;
-          margin-top: -1.5em;
-          text-transform: uppercase;
-          font-size: 11px;
-          color: rgba(0, 0, 0, 0.5); }
-          @media only screen and (max-width: 375px) {
-            .md-modal .md-content .section .md-title span.name {
-              width: 20em; } }
-          .md-modal .md-content .section .md-title span.name strong {
-            font-size: 17px;
-            font-weight: 500;
-            color: black; }
-        .md-modal .md-content .section .md-title span.avartar img {
-          border-radius: 50%;
-          height: 7em;
-          position: absolute;
-          right: 0;
-          top: 0; }
-      .md-modal .md-content .section p {
-        line-height: 1.5em;
-        letter-spacing: 0.5px;
-        text-align: justify; }
-    .md-modal .md-content a {
-      margin-top: 2em;
-      margin-bottom: 2em; }
-
-.md-overlay {
-  display: none;
-  animation: bounceInLeft 0.8s linear forwards;
-  position: fixed;
-  z-index: 400;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  opacity: 0.6; }
 
 /*# sourceMappingURL=main.css.map */

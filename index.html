@@ -76,13 +76,42 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages. </p> 
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
            </div>
-           <a class="button close" data-text="Close" onclick="hideModal()"><span>Close</span></a>
+           <a class="button close" data-text="Close" id="close-team"><span>Close</span></a>
         </div>
     </div>
-    <div class="md-overlay" onclick="hideModal()"></div> 
+    
+    <div class="md-modal" id="md-contact">
+        <form action="">
+            <fieldset>
+                <legend align="center">get in touch with us</legend>
+                <p>Complete the form below, we'll contact you within one business day.</p>
+                <input type="text" placeholder="Full Name" name="full-name" maxlength="50">
+                <input type="text" placeholder="Your Company Name" name="your-company" maxlength="50">
+                <input type="text" placeholder="Email" name="email" maxlength="50">
+                <input type="tel" placeholder="Phone Number" name="phone" maxlength="30">
+                <textarea type="text" placeholder="Short Intro..." name="message" maxlength="200"></textarea>    
+                
+                <div class="form-button">
+                    <a class="button close" data-text="Close" id="close-contact"><span>Close</span></a>
+                    <a class="button primary" data-text="Send" id="send-contact"><span>Send</span></a>
+                </div>
+                <p>Or if you prefer it, you can just <a href="mailto:http://andy.cao@creativelab.vn">e-mail</a> us or mobile (+84) 098 899 861</p>                     
+
+            </fieldset>
+
+        </form>
+        <h2>creative House</h2>
+        <p><span class="icon-location"></span> 358/6/10 CMT8 Street, Ward 10, District 3.<br/> Ho Chi Minh City, Vietnam.</p>
+        
+        
+        
+        
+    </div>
+
+    <div class="md-overlay" id="my-overlay"></div> 
       <div class="my-container">
 
-        <nav>
+        <nav id="my-nav">
             <a href="#pg1"></a>
             <a href="#pg2"></a>
             <a href="#pg3"></a>
@@ -116,7 +145,7 @@
                     <div class="left-content">
                         <h1>Who Is Creative Lab?</h1>
                         <p>Creative Lab is a quality digital outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas.</p>
-                        <a class="button primary" data-text="Meet the team" id="meettheteam" onclick="showModal()"><span>Meet the team</span></a>
+                        <a class="button primary" data-text="Meet the team" id="meettheteam"><span>Meet the team</span></a>
                     </div>
                     <div class="right-content">
                         <a href="#pg3" class="my-a">
@@ -177,7 +206,7 @@
                     
                     </div>
                     <div class="right-content">
-                        <a href="#pg1" class="my-a">
+                        <a class="my-a" id="talk">
                             <div class="next-page">NEXT PAGE</div>
                             <div class="next-content">Let's Talk</div>
                             <div class="my-button"><span class="icon-talk"></span></div>
@@ -195,10 +224,11 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.js"></script>
-    <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+
+    <script src="js/nav-active.js"></script>
     <script src="js/show-menu.js"></script>
     <script src="js/show-hide-modal.js"></script>
 
@@ -206,7 +236,10 @@
 		<script src="js/classie.js"></script>
 		<script src="js/jquery.easing.min.js"></script>		
 		<script src="js/jquery.waypoints.v2.0.2.min.js"></script>
-		<script src="js/jquery.debouncedresize.js"></script>
+        <script src="js/jquery.debouncedresize.js"></script>
+
+        <script src="js/jquery.stellar.min.js"></script>
+        
 
   </body>
 </html>

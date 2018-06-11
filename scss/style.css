@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-white".
-        on line 14 of D:\DC\3web-sass\scss\style.scss
+        on line 16 of C:\DC\3web-sass\scss\style.scss
 
-9: body{
-10:     width: 100%;
-11:     margin: 0 auto;
-12:     font-family: "Arvo", Helvetica, Arial, sans-serif;
-13:     font-size: 15px;
-14:     color: $color-white;
-15: }
-16: header{
-17:     @media only screen and (max-width: 375px){
-18:         padding-left: 2em;
-19:     }
+11: body{
+12:     width: 100%;
+13:     margin: 0 auto;
+14:     font-family: "Arvo", Helvetica, Arial, sans-serif;
+15:     font-size: 15px;
+16:     color: $color-white;
+17: }
+18: header{
+19:     @media only screen and (max-width: 375px){
+20:         padding-left: 2em;
+21:     }
 
 Backtrace:
-D:\DC\3web-sass\scss\style.scss:14
+C:\DC\3web-sass\scss\style.scss:16
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-white\".\A         on line 14 of D:\DC\3web-sass\scss\style.scss\A \A 9: body{\A 10:     width: 100%;\A 11:     margin: 0 auto;\A 12:     font-family: \"Arvo\", Helvetica, Arial, sans-serif;\A 13:     font-size: 15px;\A 14:     color: $color-white;\A 15: }\A 16: header{\A 17:     @media only screen and (max-width: 375px){\A 18:         padding-left: 2em;\A 19:     }"; }
+  content: "Error: Undefined variable: \"$color-white\".\A         on line 16 of C:\DC\3web-sass\scss\style.scss\A \A 11: body{\A 12:     width: 100%;\A 13:     margin: 0 auto;\A 14:     font-family: \"Arvo\", Helvetica, Arial, sans-serif;\A 15:     font-size: 15px;\A 16:     color: $color-white;\A 17: }\A 18: header{\A 19:     @media only screen and (max-width: 375px){\A 20:         padding-left: 2em;\A 21:     }"; }

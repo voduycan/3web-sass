@@ -1,4 +1,3 @@
-
 .md-modal{
     @media only screen and (max-width: 767px){
         width: 100%;
@@ -15,7 +14,6 @@
     position: fixed;
     z-index: $z-index5;
     height: 100%;
-    background: wheat;
     width: 44em;
     left: 50%;
     margin-left: -22em;
@@ -85,5 +83,75 @@
     width: 100%;
     height: 100vh;
     background: black;
-    opacity: 0.6;
+    opacity: 0.9;
+}
+
+#md-contact{
+
+    text-align: center;
+    h2{
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
+    form{
+        @media only screen and (max-width: 767px) {
+            padding: 1em;
+        }
+        margin-top: 4em;
+        padding-bottom: 2em;
+        fieldset{
+            text-align: center;
+            border: 1px solid yellow;
+            legend{
+                font-size: 25px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            input{
+                @media only screen and (max-width:767px){
+                    width: 80%;
+                }
+                &:focus{
+                    background: $color-orange;
+                }
+                width: 34%;
+                margin: 2px;
+                height: 2em;
+                border: none;
+                padding: 0.5em 1em;
+                
+            }
+            textarea{
+                @media only screen and (max-width:767px){
+                    width: 80%;
+                }
+                &:focus{
+                    background: $color-orange;
+                }
+                font-family: Arial, Helvetica, sans-serif;
+                width: 73%;
+                height: 4em;
+                margin-top: 2px;
+                padding: 0.5em 1em;
+            }
+            .form-button{
+                margin: 2em;
+                a{
+                    @media only screen and (max-width:767px) {
+                        width: 6em;
+                        margin: 0.5em;
+                    }
+                    margin: 0 1em;
+                }
+            }
+            p{ 
+                a{
+                    color: $color-orange;
+                }
+            }
+
+
+        }
+    }
+    
 }
