@@ -227,33 +227,27 @@ header{
                         border-top: 2px solid $color-white;
                         text-decoration: none;
                         line-height: 1.5em;
+                        height: 6em;
                         
-                        .my-button{
-                            width: 2.3em;
-                            height: 1.7em;
-                            border-radius: 50%;
-                            color: white;
+                        span{
                             background: $color-orange;
-                            text-align: center;
-                            padding-top: 6px;
-                            padding-right: 2px;
-                            position: relative;
-                            left: 5.6em;
-                            transition: all 0.5s;
-                            span{
-                                font-size: 17px;
-                                position: absolute;
-                                left: 5.5px;
-                                top: 4px;
-                            }
+                            color: $color-white;
+                            position: absolute;
+                            border-radius: 50%;
+                            padding: 5px;
+                            margin-top: 0.2em;
+                            right: 0;
+                            transition: all 0.2s;
+                            font-weight: bold;
+                            font-size: 1.5em;
                         }
+                        
                         &:hover{
                             text-decoration: none;
                             border-top-color: $color-orange;
-                            .my-button{
+                            span{
                                 color: $color-orange;
                                 background: $color-white;
-                                transition: transform 0.2s ease-in-out;
                                 transform: translateY(5px);
                             }
                         }
