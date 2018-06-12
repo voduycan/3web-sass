@@ -8,6 +8,9 @@
 .modal-block{
     display: block !important;
 }
+.md-out{
+    animation: bounceOutLeft 0.8s linear forwards;
+}
 body{
     width: 100%;
     margin: 0 auto;

@@ -1,4 +1,5 @@
 .md-modal{
+    animation: bounceInLeft 0.8s linear forwards;
     @media only screen and (max-width: 767px){
         width: 100%;
         left: 0;
@@ -63,11 +64,25 @@
                         top: 0;
                     }
                 }
+                span.avartar-done{
+                    img{
+                        
+                        height: 7em;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
             }
             p{
                 line-height: 1.5em;
                 letter-spacing: 0.5px;
                 text-align: justify;
+            }
+            .img-done{
+                width: 100%;
+                height: auto;
+            
             }
         }
         a{
@@ -77,10 +92,9 @@
     }
 }
 #md-team{
-    animation: bounceInLeft 0.8s linear forwards;
 }
 #md-service{
-    animation: bounce 0.8s linear forwards;
+    
     .md-title{
         .avarta-icon{
             
@@ -107,7 +121,6 @@
 }
 
 #md-advantage{
-    animation: bounce 0.8s linear forwards;
     .md-content{
         .md-title{
             .avarta-icon{
@@ -138,7 +151,6 @@
     }
 }
 
-
 .md-overlay{
     display: none;
     animation: bounceInLeft 0.8s linear forwards;
@@ -151,7 +163,6 @@
 }
 
 #md-contact{
-
     text-align: center;
     h2{
         text-transform: uppercase;
@@ -166,6 +177,8 @@
         fieldset{
             text-align: center;
             border: 1px solid yellow;
+            margin: 0 auto;
+            width: 80%;
             legend{
                 font-size: 25px;
                 font-weight: bold;
@@ -193,7 +206,7 @@
                     background: $color-orange;
                 }
                 font-family: Arial, Helvetica, sans-serif;
-                width: 73%;
+                width: 74.3%;
                 height: 4em;
                 margin-top: 2px;
                 padding: 0.5em 1em;

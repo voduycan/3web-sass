@@ -4,10 +4,12 @@ $(document).ready(function(){
         $('#md-team').addClass('modal-block');
         $('#my-overlay').addClass('modal-block');
     });
+    
     $('#my-overlay').click(function(){
         $('#md-team').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
+
     $('#close-team').click(function(){
         $('#md-team').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
@@ -18,10 +20,12 @@ $(document).ready(function(){
         $('#md-contact').addClass('modal-block');
         $('#my-overlay').addClass('modal-block');
     });
+
     $('#my-overlay').click(function(){
         $('#md-contact').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
+
     $('#close-contact').click(function(){
         $('#md-contact').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
@@ -32,10 +36,12 @@ $(document).ready(function(){
         $('#md-service').addClass('modal-block');
         $('#my-overlay').addClass('modal-block');
     });
+
     $('#my-overlay').click(function(){
         $('#md-service').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
+
     $('#close-service').click(function(){
         $('#md-service').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
@@ -46,12 +52,30 @@ $(document).ready(function(){
         $('#md-advantage').addClass('modal-block');
         $('#my-overlay').addClass('modal-block');
     });
+    
     $('#my-overlay').click(function(){
         $('#md-advantage').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
+
     $('#close-advantage').click(function(){
         $('#md-advantage').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+
+    //done 
+    $('#done').click(function(){
+        $('#md-done').addClass('modal-block');
+        $('#my-overlay').addClass('modal-block');
+    });
+    
+    $('#my-overlay').click(function(){
+        $('#md-done').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+
+    $('#close-done').click(function(){
+        $('#md-done').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
 });
