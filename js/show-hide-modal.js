@@ -26,4 +26,32 @@ $(document).ready(function(){
         $('#md-contact').removeClass('modal-block');
         $('#my-overlay').removeClass('modal-block');
     });
+
+    //service
+    $('#service').click(function(){
+        $('#md-service').addClass('modal-block');
+        $('#my-overlay').addClass('modal-block');
+    });
+    $('#my-overlay').click(function(){
+        $('#md-service').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+    $('#close-service').click(function(){
+        $('#md-service').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+
+    //advantage
+    $('#advantage').click(function(){
+        $('#md-advantage').addClass('modal-block');
+        $('#my-overlay').addClass('modal-block');
+    });
+    $('#my-overlay').click(function(){
+        $('#md-advantage').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
+    $('#close-advantage').click(function(){
+        $('#md-advantage').removeClass('modal-block');
+        $('#my-overlay').removeClass('modal-block');
+    });
 });

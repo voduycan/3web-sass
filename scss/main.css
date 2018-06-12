@@ -84,6 +84,54 @@
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft; }
 
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?-dudrsi");
@@ -205,7 +253,6 @@ html {
   overflow: -moz-scrollbars-none; }
 
 .md-modal {
-  animation: bounceInLeft 0.8s linear forwards;
   display: none;
   overflow: auto;
   position: fixed;
@@ -252,7 +299,8 @@ html {
           .md-modal .md-content .section .md-title span.name strong {
             font-size: 17px;
             font-weight: 500;
-            color: black; }
+            color: black;
+            display: block; }
         .md-modal .md-content .section .md-title span.avartar img {
           border-radius: 50%;
           height: 7em;
@@ -266,6 +314,50 @@ html {
     .md-modal .md-content a {
       margin-top: 2em;
       margin-bottom: 2em; }
+
+#md-team {
+  animation: bounceInLeft 0.8s linear forwards; }
+
+#md-service {
+  animation: bounce 0.8s linear forwards; }
+  #md-service .md-title .avarta-icon {
+    float: right;
+    color: white;
+    background: black;
+    font-weight: bold;
+    padding: 0.3em;
+    border-radius: 50%;
+    font-size: 5em;
+    text-align: center; }
+  #md-service span.tag {
+    color: black;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5em 1.5em;
+    border-radius: 1.5em;
+    font-size: 12px;
+    margin: 0.3em;
+    display: inline-block; }
+
+#md-advantage {
+  animation: bounce 0.8s linear forwards; }
+  #md-advantage .md-content .md-title .avarta-icon {
+    float: right;
+    color: white;
+    background: black;
+    font-weight: bold;
+    padding: 0.3em;
+    border-radius: 50%;
+    font-size: 5em;
+    text-align: center; }
+  #md-advantage .md-content h2 {
+    text-align: left;
+    font-size: 15px;
+    text-transform: uppercase; }
+  #md-advantage .md-content ul {
+    text-align: left;
+    list-style-type: circle; }
+    #md-advantage .md-content ul li {
+      padding-bottom: 1em; }
 
 .md-overlay {
   display: none;

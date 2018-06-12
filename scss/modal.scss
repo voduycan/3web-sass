@@ -8,7 +8,7 @@
         }
 
     }
-    animation: bounceInLeft 0.8s linear forwards;
+    
     display: none;
     overflow: auto;	
     position: fixed;
@@ -51,6 +51,7 @@
                         font-size: 17px;
                         font-weight: 500;
                         color: $color-black;
+                        display: block;
                     }
                 }
                 span.avartar{
@@ -75,6 +76,69 @@
         }
     }
 }
+#md-team{
+    animation: bounceInLeft 0.8s linear forwards;
+}
+#md-service{
+    animation: bounce 0.8s linear forwards;
+    .md-title{
+        .avarta-icon{
+            
+                float: right;
+                color: white;
+                background: black;
+                font-weight: bold;
+                padding: 0.3em;
+                border-radius: 50%;
+                font-size: 5em;
+                text-align: center;
+           
+        }
+    }
+    span.tag{
+        color: black;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 0.5em 1.5em;
+        border-radius: 1.5em;
+        font-size: 12px;
+        margin: 0.3em;
+        display: inline-block;
+    }
+}
+
+#md-advantage{
+    animation: bounce 0.8s linear forwards;
+    .md-content{
+        .md-title{
+            .avarta-icon{
+            
+                float: right;
+                color: white;
+                background: black;
+                font-weight: bold;
+                padding: 0.3em;
+                border-radius: 50%;
+                font-size: 5em;
+                text-align: center;
+           
+        } 
+        }
+        h2{
+            text-align: left;
+            font-size: 15px;
+            text-transform: uppercase
+        }
+        ul{
+            text-align: left;
+            list-style-type: circle;
+            li{
+                padding-bottom: 1em;
+            }
+        }
+    }
+}
+
+
 .md-overlay{
     display: none;
     animation: bounceInLeft 0.8s linear forwards;
